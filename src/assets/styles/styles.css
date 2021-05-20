@@ -311,9 +311,6 @@ footer > div.social > button {
   }
 }
 @media (max-width: 650px) {
-  #btnSend {
-    width: 50%;
-  }
   footer > img {
     width: 40%;
   }
@@ -342,10 +339,6 @@ footer > div.social > button {
     display: none;
   }
 
-  #btnSend {
-    width: 70%;
-  }
-
   footer {
     display: flex;
     flex-direction: column;
@@ -356,7 +349,7 @@ footer > div.social > button {
     margin-right: 0px;
   }
   footer > img {
-    width: 80%;
+    width: 50%;
     padding: 0px;
     padding-top: 10px;
   }
