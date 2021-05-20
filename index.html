@@ -9,16 +9,20 @@
     <title>INTERHANSE - JAIME</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <h1>INTERHANSE</h1>
       <nav>
-        <button id="toForm"><i class="far fa-envelope"></i></button>
+        <button id="btnToForm" class="btn">
+          <i class="far fa-envelope"></i>
+        </button>
       </nav>
     </header>
     <div class="container">
-      <article class="container-article">
-        <div class="col-6 col-left">
-          <h2>BLOQUE 1</h2>
+      <!-- BLOCKS -->
+
+      <article class="container-article container-carusel">
+        <div class="col-6 col-left col-responsive">
+          <h2>BLOQUE CON CARRUSEL</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             odit necessitatibus repudiandae reiciendis, sunt iure velit
@@ -40,12 +44,29 @@
             consectetur, in numquam?
           </p>
         </div>
-        <div class="col-4 col-rigth"></div>
+
+        <!-- CAROUSEL IMGAGES -->
+
+        <div class="col-4 col-rigth col-responsive">
+          <div id="corousel" class="corousel">
+            <div id="btnReturn" class="return button"><</div>
+            <div id="btnNext" class="next button">></div>
+            <img
+              id="imgCarousel"
+              class="carousel__photo initial"
+              src="./src/assets/images/img_1.jpg"
+            />
+          </div>
+        </div>
       </article>
-      <article class="container-article">
-        <div class="col-4 col-left"></div>
-        <div class="col-6 col-rigth">
-          <h2>BLOQUE 2</h2>
+      <article id="block1" class="container-article">
+        <div class="col-4 col-left col-btn col-responsive">
+          <button id="btnBlock1" class="btn">
+            IR A BLOQUE 2 <i class="fas fa-chevron-circle-down"></i>
+          </button>
+        </div>
+        <div class="col-6 col-rigth col-responsive">
+          <h2>BLOQUE 1</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             aspernatur, optio est nemo ex ut sed, dignissimos architecto harum
@@ -57,36 +78,141 @@
           </p>
         </div>
       </article>
-      <article class="container-article">
-        <div class="col-6 col-left">
-          <h2>BLOQUE 3</h2>
+      <article id="block2" class="container-article">
+        <div class="col-6 col-left col-responsive">
+          <h2>BLOQUE 2</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
             necessitatibus beatae! Voluptatibus eius eaque totam quos mollitia
             voluptatum distinctio iure unde enim delectus quasi, officiis
-            necessitatibus, aspernatur aliquam alias omnis.
+            necessitatibus, aspernatur aliquam alias omnis. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam sed, incidunt
+            provident animi tempore repellat iste delectus quasi quidem facilis
+            modi, rerum dignissimos saepe neque? Tempora autem exercitationem
+            incidunt porro?
           </p>
         </div>
-        <div class="col-4 col-rigth"></div>
+        <div class="col-4 col-rigth col-btn col-responsive">
+          <button id="btnBlock2" class="btn">
+            IR A BLOQUE 3 <i class="fas fa-chevron-circle-down"></i>
+          </button>
+        </div>
+      </article>
+      <article id="block3" class="container-article">
+        <div class="col-4 col-left col-btn col-responsive">
+          <button id="btnBlock3" class="btn">
+            IR A INICIO <i class="fas fa-chevron-circle-up"></i>
+          </button>
+        </div>
+        <div class="col-6 col-rigth col-responsive">
+          <h2>BLOQUE 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            aspernatur, optio est nemo ex ut sed, dignissimos architecto harum
+            vero iusto cupiditate, possimus similique. Magni quia totam
+            nesciunt! Dicta, deleniti. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Culpa laudantium temporibus, vero molestiae earum
+            impedit optio ab numquam libero beatae quaerat tenetur, quidem
+            cumque ratione mollitia officiis nihil exercitationem! Impedit!
+          </p>
+        </div>
       </article>
 
-      <div class="container-form">
-        <div class="form">
-          <h2>CONTÁCTANOS</h2>
-          <div class="row-form">
-            <i class="fas fa-user"></i>
-            <input type="text" id="inputName" />
-          </div>
-          <div class="row-form">
-            <i class="fas fa-envelope"></i>
-            <input type="text" id="inputEmail" />
-          </div>
+      <!-- CAROUSEL OF BLOCKS -->
+      <div id="container-mobile">
+        <div id="slider-container-outer">
+          <div id="slider-container" class="slider-container-transition">
+            <div class="slider-item" data-position="1">
+              <h2>BLOQUE 1</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum aspernatur, optio est nemo ex ut sed, dignissimos
+                architecto harum vero iusto cupiditate, possimus similique.
+                Magni quia totam nesciunt! Dicta, deleniti. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Culpa laudantium
+                temporibus, vero molestiae earum impedit optio ab numquam libero
+                beatae quaerat tenetur, quidem cumque ratione mollitia officiis
+                nihil exercitationem! Impedit!
+              </p>
+            </div>
 
-          <button id="btnSend"><i class="fas fa-share"></i></button>
+            <div class="slider-item" data-position="2">
+              <h2>BLOQUE 2</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
+                necessitatibus beatae! Voluptatibus eius eaque totam quos
+                mollitia voluptatum distinctio iure unde enim delectus quasi,
+                officiis necessitatibus, aspernatur aliquam alias omnis. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed,
+                incidunt provident animi tempore repellat iste delectus quasi
+                quidem facilis modi, rerum dignissimos saepe neque? Tempora
+                autem exercitationem incidunt porro?
+              </p>
+            </div>
+            <div class="slider-item" data-position="3">
+              <h2>BLOQUE 3</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum aspernatur, optio est nemo ex ut sed, dignissimos
+                architecto harum vero iusto cupiditate, possimus similique.
+                Magni quia totam nesciunt! Dicta, deleniti. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Culpa laudantium
+                temporibus, vero molestiae earum impedit optio ab numquam libero
+                beatae quaerat tenetur, quidem cumque ratione mollitia officiis
+                nihil exercitationem! Impedit!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button id="move-button" class="btn-next">
+            <i class="fas fa-caret-square-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- FORM -->
+
+      <div id="form" class="container-form">
+        <div class="form-line">
+          <div>
+            <h2>CONTÁCTANOS</h2>
+            <div class="row-form">
+              <i class="fas fa-user"></i>
+              <input type="text" id="inputName" />
+            </div>
+            <div class="row-form">
+              <i class="fas fa-envelope"></i>
+              <input type="text" id="inputEmail" />
+            </div>
+
+            <button id="btnSend"><i class="fas fa-share"></i></button>
+          </div>
         </div>
       </div>
     </div>
-    <footer>a</footer>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <img
+        loading="lazy"
+        class="logo-footer"
+        src="./src/assets/images/logo.png"
+        alt=""
+      />
+      <div class="social">
+        <button onClick="window.open('https://www.instagram.com/')">
+          <i class="fab fa-instagram"></i>
+        </button>
+        <button onClick="window.open('https://www.twitter.com/')">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button onClick="window.open('https://www.facebook.com/')">
+          <i class="fab fa-facebook"></i>
+        </button>
+      </div>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
